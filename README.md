@@ -13,3 +13,8 @@ There is no apparent trend in the low pass signal for precipitation or the high 
 
 The linear, polynomial, and gaussian regressions didn't provide any insights into the trend of the chlorophyll data. However, several sine curves were manually fit and appear to mimic the upper and lower bounds of the data.
 
+A basic model of the chlorophyll data was created using temperature and precipitation as input parameters as inputsas shown below:
+
+modelChl = modelChl + 1/5 * weather.TMAX[modelTime + lag] + 1/5 * weather.PRCP[modelTime + lag]
+
+The chlorophyll levels in mg/m³ roughly correspond to one fifth of the temperature in °F. The precipitation datain inches was also included at one fifth of its value, but provides almost nothing to the curve. These coefficients were manually tuned. The model does not capture the complexity of the raw data, but when the rolling average of the model and chl signal are compared, the model and the chl data have the same sinusoidal pattern. However, the model is offset (out of phase) with the chl signal, so a lag was introduced. The chlorophyll signal appears to reach the yearly minimum 80 days before the temperature hits the yearly minimum. Thus, the tuned model shows that temperature and chlorophyll can be roughly correlated, but there are too many variables to suggest that this is a causal relationship. 
