@@ -1,4 +1,4 @@
-# EI-DelBayChl
+# NJChl
 A brief investigation into the relationship of chlorophyll, temperature, and precipitation in the Delaware Bay. File 2.1 NJDEP and 2.1 Aqua show how the chlorophyll data was imported and compressed. File 2.1 Weather shows the import and analysis of the temperature and precipitation data. File 2.2 shows the analysis of the chlorophyll data and the development of the model.
 
 Issues:
